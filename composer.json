@@ -1,0 +1,22 @@
+{
+  "name": "whitespace-se/wordpress-plugin-gatsby",
+  "description": "Adds preview and other integrations with Gatsby",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Whitespace Dev",
+      "email": "code@whitespace.se"
+    }
+  ],
+  "require": {
+    "composer/installers": "~1.0"
+  },
+  "require-dev": {
+    "ivome/graphql-relay-php": "0.3.1",
+    "webonyx/graphql-php": "14.3.0"
+  },
+  "extra": {
+    "installer-name": "whitespace-gatsby"
+  }
+}
