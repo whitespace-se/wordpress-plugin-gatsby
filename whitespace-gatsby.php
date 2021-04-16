@@ -78,14 +78,19 @@ function decrypt_user($string) {
 if (defined("GATSBY_PREVIEW_ENDPOINT")) {
   add_filter("preview_post_link", function ($link) {
     global $post;
-    $id = Relay::toGlobalId($post->post_type, $post->ID);
+    if ($post->post_type == "revision") {
+      $parent_post = get_post($post->post_parent);
+    } else {
+      $parent_post = $post;
+    }
+    $id = Relay::toGlobalId($parent_post->post_type, $parent_post->ID);
     return GATSBY_PREVIEW_ENDPOINT .
       "?" .
       http_build_query([
         "id" => $id,
         "user" => encrypt_user(wp_get_current_user()->ID),
         "wpnonce" => wp_create_nonce("wp_rest"),
-        "contentType" => $post->post_type,
+        "contentType" => $parent_post->post_type,
       ]);
   });
   add_filter("determine_current_user", function ($user_id) {
