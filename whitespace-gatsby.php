@@ -41,6 +41,12 @@ add_action("template_redirect", function () {
       exit();
     }
   }
+
+  if(is_404()) {
+    wp_redirect(admin_url());
+    exit();
+  }
+  
 });
 
 function encrypt_user($user) {
