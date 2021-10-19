@@ -49,31 +49,10 @@ class RefreshHandler {
           ENT_NOQUOTES,
         ); ?></textarea>
 
-        <div class="description">
-          <p><?php _e(
-            "URLs that will be requested each time a post is updated. One per line.",
-            "whitespace-gatsby",
-          ); ?></p>
-          <p><?php _e("Available replacements", "whitespace-gatsby"); ?>:</p>
-          <ul>
-            <li><code>{DESCRIPTION}</code> &ndash; <?php _e(
-              "The reason for the notification, e.g. \"Post 42 updated in WordPress\"",
-              "whitespace-gatsby",
-            ); ?></li>
-            <li><code>{BLOG_ID}</code> &ndash; <?php _e(
-              "Blog ID (for multisites)",
-              "whitespace-gatsby",
-            ); ?></li>
-            <li><code>{BLOG_DOMAIN}</code> &ndash; <?php _e(
-              "Blog domain (for multisites)",
-              "whitespace-gatsby",
-            ); ?></li>
-            <li><code>{BLOG_PATH}</code> &ndash; <?php _e(
-              "Blog path without leading or trailing slash (for multisites)",
-              "whitespace-gatsby",
-            ); ?></li>
-          </ul>
-        </div>
+        <p class="description"><?php _e(
+          "URLs that will be requested each time a post is updated. One per line.",
+          "whitespace-gatsby",
+        ); ?></p>
         <?php
       },
       $this->pluginHandler::OPTION_SECTIONS,
