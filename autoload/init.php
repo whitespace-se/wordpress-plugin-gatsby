@@ -25,7 +25,7 @@ class WhitespaceGatsby {
 
 WhitespaceGatsby::init();
 
-add_action("WhitespaceHeadlessCms/init", function ($pluginHandler) {
+add_action("WhitespaceGatsby/init", function ($pluginHandler) {
   $pluginHandler->registerHandler(
     "preview",
     new PreviewHandler($pluginHandler),
