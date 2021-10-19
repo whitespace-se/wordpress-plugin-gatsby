@@ -52,14 +52,14 @@ class PreviewHandler {
   public function onAdminInit() {
     add_settings_section(
       self::OPTION_SECTION,
-      __("Headless settings", "whitespace-headless-cms"),
+      __("Preview", "whitespace-gatsby"),
       null,
       $this->pluginHandler::OPTION_SECTIONS,
     );
 
     add_settings_field(
       "preview_endpoint",
-      __("Preview endpoint", "whitespace-headless-cms"),
+      __("Preview endpoint", "whitespace-gatsby"),
       function () {
         $overriden =
           defined("GATSBY_PREVIEW_ENDPOINT") &&

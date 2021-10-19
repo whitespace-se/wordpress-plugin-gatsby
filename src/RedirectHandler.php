@@ -18,14 +18,14 @@ class RedirectHandler {
   public function onAdminInit() {
     add_settings_section(
       self::OPTION_SECTION,
-      __("Headless settings", "whitespace-headless-cms"),
+      __("Redirection to front-end", "whitespace-gatsby"),
       null,
       $this->pluginHandler::OPTION_SECTIONS,
     );
 
     add_settings_field(
       "base_url",
-      __("Front-end base URL", "whitespace-headless-cms"),
+      __("Front-end base URL", "whitespace-gatsby"),
       function () {
         $overriden =
           defined("GATSBY_BASE_URL") && !is_null(\GATSBY_BASE_URL); ?>

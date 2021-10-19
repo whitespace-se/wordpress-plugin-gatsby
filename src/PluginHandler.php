@@ -25,8 +25,8 @@ class PluginHandler {
 
   public function onAdminMenu() {
     add_options_page(
-      __("Headless settings", "whitespace-gatsby"),
-      __("Headless", "whitespace-gatsby"),
+      __("Gatsby settings", "whitespace-gatsby"),
+      __("Gatsby", "whitespace-gatsby"),
       "manage_options",
       __("whitespace-gatsby"),
       [$this, "renderOptionsPage"],
@@ -35,7 +35,7 @@ class PluginHandler {
   public function renderOptionsPage(): void {
     ?>
       <div class="wrap">
-          <h1><?php _e("Headless settings", "whitespace-gatsby"); ?></h1>
+          <h1><?php _e("Gatsby settings", "whitespace-gatsby"); ?></h1>
           <form method="post" action="options.php">
           <?php
           // This prints out all hidden setting fields

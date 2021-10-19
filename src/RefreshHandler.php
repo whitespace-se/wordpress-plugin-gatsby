@@ -19,14 +19,14 @@ class RefreshHandler {
   public function onAdminInit() {
     add_settings_section(
       self::OPTION_SECTION,
-      __("Headless settings", "whitespace-headless-cms"),
+      __("Gatsby refresh", "whitespace-gatsby"),
       null,
       $this->pluginHandler::OPTION_SECTIONS,
     );
 
     add_settings_field(
       "refresh_endpoints",
-      __("Refresh endpoints", "whitespace-headless-cms"),
+      __("Refresh endpoints", "whitespace-gatsby"),
       function () {
         $overriden =
           defined("GATSBY_REFRESH_ENDPOINTS") &&
@@ -52,28 +52,25 @@ class RefreshHandler {
         <div class="description">
           <p><?php _e(
             "URLs that will be requested each time a post is updated. One per line.",
-            "whitespace-headless-cms",
+            "whitespace-gatsby",
           ); ?></p>
-          <p><?php _e(
-            "Available replacements",
-            "whitespace-headless-cms",
-          ); ?>:</p>
+          <p><?php _e("Available replacements", "whitespace-gatsby"); ?>:</p>
           <ul>
             <li><code>{DESCRIPTION}</code> &ndash; <?php _e(
               "The reason for the notification, e.g. \"Post 42 updated in WordPress\"",
-              "whitespace-headless-cms",
+              "whitespace-gatsby",
             ); ?></li>
             <li><code>{BLOG_ID}</code> &ndash; <?php _e(
               "Blog ID (for multisites)",
-              "whitespace-headless-cms",
+              "whitespace-gatsby",
             ); ?></li>
             <li><code>{BLOG_DOMAIN}</code> &ndash; <?php _e(
               "Blog domain (for multisites)",
-              "whitespace-headless-cms",
+              "whitespace-gatsby",
             ); ?></li>
             <li><code>{BLOG_PATH}</code> &ndash; <?php _e(
               "Blog path without leading or trailing slash (for multisites)",
-              "whitespace-headless-cms",
+              "whitespace-gatsby",
             ); ?></li>
           </ul>
         </div>
