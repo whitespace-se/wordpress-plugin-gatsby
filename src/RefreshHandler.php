@@ -36,8 +36,7 @@ class RefreshHandler {
           name="<?php echo $this->pluginHandler
             ::OPTION_NAME; ?>[refresh_endpoints]"
           rows="5"
-          cols="40"
-          style="width: 100%;"
+          cols="50"
           <?php if ($overriden) {
             echo "disabled";
           } ?>

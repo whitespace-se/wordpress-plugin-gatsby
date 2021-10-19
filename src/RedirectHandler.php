@@ -32,6 +32,7 @@ class RedirectHandler {
         <input
           id="base_url"
           type="url"
+          size="50"
           name="<?php echo $this->pluginHandler::OPTION_NAME; ?>[base_url]"
           <?php if ($overriden) {
             echo "disabled";

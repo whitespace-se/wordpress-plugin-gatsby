@@ -68,6 +68,7 @@ class PreviewHandler {
         <input
           id="preview_endpoint"
           type="url"
+          size="50"
           name="<?php echo $this->pluginHandler
             ::OPTION_NAME; ?>[preview_endpoint]"
           <?php if ($overriden) {
