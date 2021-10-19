@@ -63,7 +63,7 @@ class RedirectHandler {
   }
 
   public function onTemplateRedirect(): void {
-    if (!is_user_logged_in()) {
+    if (!is_user_logged_in() || is_404()) {
       wp_redirect(admin_url());
       exit();
     }
