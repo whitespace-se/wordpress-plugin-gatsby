@@ -12,6 +12,7 @@ class PreviewHandler {
   public function __construct(PluginHandler $plugin_handler) {
     $this->pluginHandler = $plugin_handler;
 
+    add_action("admin_init", [$this, "onAdminInit"]);
     add_filter("preview_post_link", [$this, "filterPreviewPostLink"]);
     add_filter("determine_current_user", [$this, "filterDetermineCurrentUser"]);
     add_filter("graphql_access_control_allow_headers", [
