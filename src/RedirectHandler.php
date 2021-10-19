@@ -48,7 +48,7 @@ class RedirectHandler {
     );
   }
 
-  public function getBaseUrl(): array {
+  public function getBaseUrl() {
     if (defined("GATSBY_BASE_URL") && !is_null(\GATSBY_BASE_URL)) {
       $url = \GATSBY_BASE_URL;
     } else {

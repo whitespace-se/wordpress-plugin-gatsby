@@ -85,7 +85,7 @@ class PreviewHandler {
     );
   }
 
-  public function getPreviewEndpoint(): array {
+  public function getPreviewEndpoint() {
     if (
       defined("GATSBY_PREVIEW_ENDPOINT") &&
       !is_null(\GATSBY_PREVIEW_ENDPOINT)
