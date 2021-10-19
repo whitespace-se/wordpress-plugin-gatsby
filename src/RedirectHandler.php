@@ -38,7 +38,7 @@ class RedirectHandler {
             echo "disabled";
           } ?>
           value="<?php echo htmlspecialchars(
-            implode("\n", $this->pluginHandler->getOption("base_url", [])),
+            $this->pluginHandler->getOption("base_url"),
           ); ?>"
         >
         <?php

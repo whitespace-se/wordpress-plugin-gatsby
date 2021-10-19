@@ -75,10 +75,7 @@ class PreviewHandler {
             echo "disabled";
           } ?>
           value="<?php echo htmlspecialchars(
-            implode(
-              "\n",
-              $this->pluginHandler->getOption("preview_endpoint", []),
-            ),
+            $this->pluginHandler->getOption("preview_endpoint"),
           ); ?>"
         >
         <?php
