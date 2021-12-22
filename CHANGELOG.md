@@ -1,3 +1,9 @@
+## 0.2.1 (December 22, 2021)
+
+### Fixes
+
+- Didn’t redirect on preview of draft posts
+
 ## 0.2.0 (October 19, 2021)
 
 ### ⚠ BREAKING CHANGES
