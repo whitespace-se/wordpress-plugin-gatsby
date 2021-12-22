@@ -63,12 +63,21 @@ class RedirectHandler {
   }
 
   public function onTemplateRedirect(): void {
+    global $post;
+
     if (!is_user_logged_in() || is_404()) {
       wp_redirect(admin_url());
       exit();
     }
 
     if (is_preview()) {
+      if ($post) {
+        $link = get_preview_post_link($post);
+        if ($link) {
+          header("Location: " . $link);
+          exit();
+        }
+      }
       return;
     }
 
