@@ -1,3 +1,9 @@
+## 0.2.2 (December 22, 2021)
+
+### Features
+
+- add `WhitespaceGatsby/preview_endpoint/query` filter
+
 ## 0.2.1 (December 22, 2021)
 
 ### Fixes
