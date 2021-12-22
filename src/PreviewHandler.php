@@ -108,15 +108,17 @@ class PreviewHandler {
     $endpoint = $this->getPreviewEndpoint();
     if (!empty($endpoint)) {
       $id = Relay::toGlobalId($parent_post->post_type, $parent_post->ID);
-      $link =
-        $endpoint .
-        "?" .
-        http_build_query([
+      $query = apply_filters(
+        "WhitespaceGatsby/preview_endpoint/query",
+        [
           "id" => $id,
           "user" => $this->encrypt_user(wp_get_current_user()->ID),
           "wpnonce" => wp_create_nonce("wp_rest"),
           "contentType" => $parent_post->post_type,
-        ]);
+        ],
+        $parent_post,
+      );
+      $query = $link = $endpoint . "?" . http_build_query($query);
     }
     return $link;
   }
