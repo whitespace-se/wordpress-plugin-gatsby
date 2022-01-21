@@ -2,7 +2,7 @@
   "name": "whitespace-se/wordpress-plugin-gatsby",
   "description": "Adds preview and other integrations with Gatsby",
   "type": "wordpress-plugin",
-  "license": "MIT",
+  "license": "AGPL-3.0-or-later",
   "authors": [
     {
       "name": "Whitespace Dev",
