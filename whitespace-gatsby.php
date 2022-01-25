@@ -3,7 +3,7 @@
  * Plugin Name: Whitespace Gatsby integration
  * Plugin URI: -
  * Description: Adds preview and other integrations with Gatsby
- * Version: 0.2.2
+ * Version: 1.0.0
  * Author: Whitespace
  * Author URI: https://www.whitespace.se/
  * Text Domain: whitespace-gatsby
